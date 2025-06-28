@@ -82,7 +82,7 @@ def web_page():
                 <span style="font-size: 0.75rem;">by Tyler, The Creator</span>
             </p>
             <audio controls>
-                <source src="/output.ogg" type="audio/ogg">
+                <source src="/Tomorrow.ogg" type="audio/ogg">
                 Your browser does not support the audio element.
             </audio>
         </div>
@@ -182,8 +182,8 @@ while True:
     request = conn.recv(1024).decode('utf-8')
     print('Content = %s' % request)
     
-    if '/output.ogg' in request:
-        serve_ogg_file(conn, '/songs/output.ogg')
+    if '/Tomorrow.ogg' in request:
+        serve_ogg_file(conn, '/songs/Tomorrow.ogg')
     elif '/All_Mine.ogg' in request:
         serve_ogg_file(conn, '/songs/All Mine.ogg')
     elif '/No_Church_In_The_Wild.ogg' in request:
